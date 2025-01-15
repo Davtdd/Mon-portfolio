@@ -1,0 +1,175 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.projet-per{
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 25%;
+
+} */
+
+/* Deuxieme partie du code CSS */
+
+
+.projet-per {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.projet-per > div {
+    background: rgb(84, 83, 83);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projet-per > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.projet-per p {
+    font-size: 1.2em;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.projet-per li {
+    font-size: 1.5em;
+    color: #111212;
+    font-weight: 600;
+    list-style: none;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+}
+
+.projet-per ul {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.img-chat, .img-formu {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.img-chat img, .img-formu img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-chat img:hover, .img-formu img:hover {
+    transform: scale(1.02);
+}
+
+/* Style pour les sections de description des technologies */
+.tech-stack {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.tech-stack h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tech-item {
+    background: #e9ecef;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #495057;
+}
+
+/* Style pour les objectifs et fonctionnalités */
+.features-list {
+    margin: 15px 0;
+}
+
+.features-list li {
+    font-size: 1em;
+    color: #000000;
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.features-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projet-per {
+        padding: 15px;
+    }
+
+    .projet-per > div {
+        padding: 20px;
+    }
+
+    .projet-per li {
+        font-size: 1.3em;
+    }
+
+    .img-chat, .img-formu {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation pour les liens */
+.projet-per a {
+    color: #3498db;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.projet-per a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.projet-per a:hover {
+    color: #2980b9;
+}
+
+.projet-per a:hover::after {
+    transform: scaleX(1);
+}
+

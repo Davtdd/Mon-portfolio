@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - BAHOUNA SAINT</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-menu">
+            <a href="index.html" class="logo">BAHOUNA SAINT</a>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+                <a href="projetpersonnel.html"><i class="fas fa-laptop-code"></i> Projets Personnels</a>
+                <a href="projetprofessionnels"><i class="fas fa-briefcase"></i> Projets Professionnels</a>
+                <a href="competence.html"><i class="fas fa-tools"></i> Compétences</a>
+                <a href="veilleinfo.html"><i class="fas fa-search"></i> Veille Informatique</a>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="welcome-section">
+        <div class="particles" id="particles"></div>
+        <h1 class="welcome-text"></h1>
+    </section>
+    <div class="photo_me">
+        <img src="Moi.jpg" alt=""> <br><br>
+        <p>
+        
+            Bienvenue ! Je suis Todd BAHOUNA SAINT, étudiant passionné en BTS Services Informatiques aux Organisations (SIO) à l'Institut F2I. Mon parcours est guidé par une fascination profonde pour le développement informatique et l'intelligence artificielle, deux domaines qui façonnent notre avenir numérique. <br>
+            De nature curieuse, je suis constamment en quête de nouvelles connaissances et de défis stimulants. Cette curiosité m'a naturellement conduit vers l'IA, un domaine où j'aspire à avoir un impact significatif dans les années à venir. Je crois fermement que l'intelligence artificielle a le potentiel de transformer positivement notre société, et je souhaite contribuer activement à cette évolution. <br>
+            L'une de mes forces réside dans ma capacité à travailler en équipe. Je suis convaincu que les meilleures innovations naissent de la collaboration et du partage d'idées. Cette approche collaborative, combinée à ma passion pour la technologie, me permet d'aborder chaque projet avec enthousiasme et détermination. <br> 
+            À travers ce portfolio, je vous invite à découvrir mon parcours, mes projets et ma vision de l'avenir technologique. Que vous soyez un potentiel collaborateur, un recruteur ou simplement curieux du domaine, je serai ravi d'échanger avec vous sur les possibilités infinies qu'offrent le développement et l'intelligence artificielle.
+    </p>
+    </div>
+    <div class="skills-soft">
+        <h2>Compétences Interpersonnelles</h2>
+        <div class="soft-skills-container">
+            <div class="soft-skill-card">
+                <i class="fas fa-users"></i>
+                <h3>Travail d'équipe</h3>
+                <p>Capacité à collaborer efficacement au sein d'équipes multidisciplinaires, partager des idées et contribuer à un environnement de travail positif.</p>
+            </div>
+    
+            <div class="soft-skill-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Curiosité intellectuelle</h3>
+                <p>Passion pour l'apprentissage continu, particulièrement dans les domaines de l'IA et des nouvelles technologies.</p>
+            </div>
+    
+            <div class="soft-skill-card">
+                <i class="fas fa-comments"></i>
+                <h3>Communication</h3>
+                <p>Aptitude à communiquer clairement des concepts techniques et à échanger constructivement avec différents interlocuteurs.</p>
+            </div>
+    
+            <div class="soft-skill-card">
+                <i class="fas fa-tasks"></i>
+                <h3>Organisation</h3>
+                <p>Gestion efficace des priorités et capacité à mener plusieurs projets de front tout en respectant les délais.</p>
+            </div>
+    
+            <div class="soft-skill-card">
+                <i class="fas fa-handshake"></i>
+                <h3>Adaptabilité</h3>
+                <p>Flexibilité face aux changements et capacité à s'adapter rapidement aux nouvelles situations et technologies.</p>
+            </div>
+    
+            <div class="soft-skill-card">
+                <i class="fas fa-brain"></i>
+                <h3>Résolution de problèmes</h3>
+                <p>Approche analytique et créative dans la recherche de solutions innovantes aux défis techniques.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        // Animation du texte de bienvenue avec effet de machine à écrire
+        const welcomeText = "Bonjour! Bienvenue sur le portfolio de Todd BAHOUNA SAINT";
+        const textElement = document.querySelector('.welcome-text');
+        let index = 0;
+
+        function typeText() {
+            if (index < welcomeText.length) {
+                textElement.textContent += welcomeText.charAt(index);
+                index++;
+                setTimeout(typeText, 100);
+            } else {
+                setTimeout(() => {
+                    textElement.textContent = '';
+                    index = 0;
+                    typeText();
+                }, 2000);
+            }
+        }
+
+        typeText();
+
+        // Menu hamburger
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+ 
+// Création des particules
+function createParticles() {
+  const particlesContainer = document.getElementById('particles');
+  const numberOfParticles = 50;
+  const particleSize = 5; // adjustable particle size
+
+  for (let i = 0; i < numberOfParticles; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.width = `${particleSize}px`;
+    particle.style.height = `${particleSize}px`;
+    
+    // Position aléatoire
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    
+    // Durée et délai d'animation aléatoires
+    const duration = 15 + Math.random() * 15;
+    const delay = Math.random() * 10;
+    particle.style.animation = `float ${duration}s ${delay}s infinite linear`;
+
+    particlesContainer.appendChild(particle);
+  }
+}
+
+createParticles();
+    </script>
+
+
+
+
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> toddbahouna3@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +33 6 XX XX XX XX</p>
+            <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Réseaux Sociaux</h3>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/todd-bahouna" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/toddbahouna" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/toddbahouna" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Navigation Rapide</h3>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projetpersonnel.html">Projets Personnels</a></li>
+                <li><a href="competence.html">Compétences</a></li>
+                <li><a href="veilleinfo.html">Veille Informatique</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 Todd BAHOUNA SAINT | Tous droits réservés</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
