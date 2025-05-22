@@ -1,21 +1,23 @@
-/* Police principale */
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  background: #f7f9fb;
-  color: #222;
-  margin: 0;
-  padding: 0;
+/* --- Responsive Global --- */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-/* Navigation */
+/* --- Navigation --- */
 .nav-container {
   background: #fff;
   box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
-
 .nav-menu {
   display: flex;
   align-items: center;
@@ -23,8 +25,8 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 0.7rem 2rem;
+  width: 100%;
 }
-
 .logo {
   font-weight: 700;
   font-size: 1.7rem;
@@ -32,26 +34,11 @@ body {
   text-decoration: none;
   letter-spacing: 2px;
 }
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-
-.hamburger .bar {
-  width: 26px;
-  height: 3px;
-  background: #2d3a4b;
-  border-radius: 2px;
-}
-
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
-
 .nav-links a {
   color: #2d3a4b;
   text-decoration: none;
@@ -63,14 +50,27 @@ body {
   align-items: center;
   gap: 0.5em;
 }
-
 .nav-links a:hover,
 .nav-links .active {
   background: #2d3a4b;
   color: #fff;
 }
 
-/* Section de bienvenue */
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+.hamburger .bar {
+  width: 26px;
+  height: 3px;
+  background: #2d3a4b;
+  border-radius: 2px;
+}
+
+/* --- Welcome Section --- */
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -81,8 +81,8 @@ body {
   background: linear-gradient(120deg, #e0e7ef 0%, #f7f9fb 100%);
   margin-bottom: 2rem;
   overflow: hidden;
+  width: 100%;
 }
-
 .welcome-text {
   font-size: 3rem;
   font-weight: 700;
@@ -91,9 +91,10 @@ body {
   letter-spacing: 1px;
   text-align: center;
   z-index: 1;
+  word-break: break-word;
 }
 
-/* Particules */
+/* --- Particles --- */
 .particles {
   position: absolute;
   width: 100%;
@@ -102,7 +103,6 @@ body {
   left: 0;
   z-index: 0;
 }
-
 .particle {
   position: absolute;
   background: #b3c6e0;
@@ -111,17 +111,17 @@ body {
   pointer-events: none;
 }
 
-/* Présentation */
+/* --- Présentation --- */
 #presentation-title {
   font-size: 2.2rem;
   font-weight: 700;
   color: #2d3a4b;
   margin: 2rem 0 1rem 0;
   transition: opacity 1s;
+  text-align: center;
 }
-
 .photo_me {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 2rem auto;
   background: #fff;
   border-radius: 18px;
@@ -129,34 +129,32 @@ body {
   padding: 2rem 2.5rem;
   font-size: 1.15rem;
   line-height: 1.7;
+  word-break: break-word;
 }
 
-/* BTS Section */
+/* --- BTS Section --- */
 .bts {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   background: #f0f4fa;
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(44, 62, 80, 0.06);
   padding: 1.5rem 2rem;
 }
-
 .bts h2 {
   color: #2d3a4b;
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
 }
-
 .bts ul {
   padding-left: 1.2rem;
 }
-
 .bts li {
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
-/* Barres de compétences animées */
+/* --- Compétences Techniques --- */
 .technical-skills {
   max-width: 1100px;
   margin: 2.5rem auto;
@@ -213,7 +211,7 @@ body {
   color: #4e7ad2;
 }
 
-/* Compétences interpersonnelles */
+/* --- Compétences Interpersonnelles --- */
 .skills-soft {
   max-width: 1100px;
   margin: 2.5rem auto;
@@ -222,20 +220,17 @@ body {
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
 }
-
 .skills-soft h2 {
   text-align: center;
   color: #2d3a4b;
   margin-bottom: 2rem;
 }
-
 .soft-skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
-
 .soft-skill-card {
   background: #f0f4fa;
   border-radius: 12px;
@@ -245,25 +240,22 @@ body {
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .soft-skill-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 24px rgba(44, 62, 80, 0.12);
 }
-
 .soft-skill-card i {
   font-size: 2.2rem;
   color: #4e7ad2;
   margin-bottom: 0.7rem;
 }
-
 .soft-skill-card h3 {
   margin: 0.5rem 0 0.7rem 0;
   color: #2d3a4b;
   font-size: 1.1rem;
 }
 
-/* Style moderne pour la section CV */
+/* --- Section CV --- */
 .Cv {
   max-width: 600px;
   margin: 3rem auto 2rem auto;
@@ -274,7 +266,6 @@ body {
   text-align: center;
   animation: fadeInUp 0.8s;
 }
-
 .Cv h2 {
   color: #4e7ad2;
   font-size: 2rem;
@@ -282,14 +273,12 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
 }
-
 .Cv p {
   font-size: 1.15rem;
   color: #222;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
-
 .button-cv {
   display: inline-block;
   background: linear-gradient(90deg, #4e7ad2 0%, #2d3a4b 100%);
@@ -305,18 +294,16 @@ body {
   cursor: pointer;
   margin-top: 0.5rem;
 }
-
 .button-cv:hover {
   background: linear-gradient(90deg, #2d3a4b 0%, #4e7ad2 100%);
   transform: translateY(-2px) scale(1.04);
 }
 
-/* Contact bouton */
+/* --- Contact bouton --- */
 .contact {
   text-align: center;
   margin: 2.5rem 0 2rem 0;
 }
-
 .button-contact {
   background: linear-gradient(90deg, #4e7ad2 0%, #2d3a4b 100%);
   color: #fff;
@@ -330,20 +317,20 @@ body {
   transition: background 0.2s, transform 0.2s;
   cursor: pointer;
 }
-
 .button-contact:hover {
   background: linear-gradient(90deg, #2d3a4b 0%, #4e7ad2 100%);
   transform: translateY(-2px) scale(1.04);
 }
 
-/* Footer */
+/* --- Footer --- */
 .footer {
   background: #2d3a4b;
   color: #fff;
   padding: 2rem 0 0.5rem 0;
   margin-top: 3rem;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 .footer-content {
   display: flex;
   flex-wrap: wrap;
@@ -351,109 +338,125 @@ body {
   max-width: 1200px;
   margin: auto;
   gap: 2rem;
+  width: 100%;
 }
-
 .footer-section {
   min-width: 220px;
   margin-bottom: 1.5rem;
+  flex: 1 1 220px;
 }
-
 .footer-section h3 {
   margin-bottom: 1rem;
   color: #b3c6e0;
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
-
 .footer-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
-
 .footer-section ul li {
   margin-bottom: 0.7rem;
 }
-
 .footer-section a {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
 }
-
 .footer-section a:hover {
   color: #4e7ad2;
 }
-
 .social-links a {
   font-size: 1.5rem;
   margin-right: 1rem;
   color: #b3c6e0;
   transition: color 0.2s;
 }
-
 .social-links a:hover {
   color: #fff;
 }
-
 .footer-bottom {
   text-align: center;
   color: #b3c6e0;
   font-size: 0.95rem;
   margin-top: 1rem;
+  width: 100%;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+  .nav-menu,
+  .footer-content {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 1000px) {
+  .skills-container,
+  .soft-skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
   .nav-menu {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
   }
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    display: none;
-    gap: 0;
-  }
-  .nav-links.active {
-    display: flex;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
-    border-radius: 0 0 12px 12px;
-    margin-top: 0.5rem;
-  }
-  .hamburger {
-    display: flex;
-    margin-left: auto;
-  }
-  .soft-skills-container {
-    flex-direction: column;
-    align-items: center;
-  }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .photo_me,
   .bts,
-  .skills-soft {
+  .skills-soft,
+  .technical-skills,
+  .Cv {
     padding: 1rem 0.5rem;
   }
   .welcome-text {
     font-size: 2rem;
   }
   .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  .nav-menu {
+    padding: 0.5rem 0.5rem;
   }
 }
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
+@media (max-width: 500px) {
+  .logo {
+    font-size: 1.2rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .footer-section {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .Cv {
+    padding: 1rem 0.2rem;
+  }
+  .soft-skill-card,
+  .skill-category {
+    width: 100%;
+    min-width: 0;
+    padding: 1rem 0.2rem;
+  }
+  .skills-soft,
+  .technical-skills {
+    padding: 1rem 0.2rem;
+  }
+}
+@media (max-width: 350px) {
+  .logo {
+    font-size: 1rem;
+  }
+  .welcome-text {
+    font-size: 1.1rem;
   }
 }
