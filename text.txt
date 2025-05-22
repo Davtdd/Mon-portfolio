@@ -1,0 +1,25 @@
+Présentation de mon Portfolio
+
+Ce portfolio a été conçu pour présenter mon parcours, mes projets et mes compétences techniques dans le domaine de l’informatique, avec un accent particulier sur la cybersécurité et le développement.
+
+Technologies utilisées :
+
+HTML5 : structure sémantique et accessible pour toutes les pages.
+
+CSS3 : mise en forme moderne et responsive pour une bonne expérience utilisateur sur tous les appareils.
+
+JavaScript : interaction dynamique côté client, animations, gestion des événements et amélioration de l’ergonomie. Aucune technologie back-end n’est utilisée, ce qui garantit une simplicité de déploiement et une rapidité d’exécution.
+
+Compétences démontrées dans ce portfolio :
+
+Maîtrise des langages front-end (HTML, CSS, JavaScript).
+
+Utilisation de JavaScript pour créer des éléments interactifs (barres de progression, animations, gestion de navigation).
+
+Conception responsive pour s’adapter aux différents formats d’écran.
+
+Organisation claire et modulaire du code, facilitant la maintenance et les évolutions futures.
+
+Mise en avant des compétences en cybersécurité et administration réseau, illustrées par des projets personnels et des réalisations concrètes.
+
+Ce portfolio est entièrement statique, ce qui signifie qu’il ne nécessite aucun serveur ou base de données pour fonctionner. Il peut être hébergé sur des plateformes gratuites comme GitHub Pages ou Netlify, facilitant ainsi sa diffusion et sa consultation.

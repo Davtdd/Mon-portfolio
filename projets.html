@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes Projets Personnels</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylePer.css" />
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="nav-menu">
+        <a href="index.html" class="logo">BAHOUNA SAINT</a>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+          <a href="projets.html"><i class="fas fa-laptop-code"></i> Projets</a>
+          <a href="veilleinfo.html"
+            ><i class="fas fa-search"></i> Veille Informatique</a
+          >
+          <a href="apropos.html"><i class="fas fa-info-circle"></i> À Propos</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="projet-per">
+      <div class="tabs-container">
+        <button class="tab-btn active" data-tab="personnel">
+          Projets Personnels
+        </button>
+        <button class="tab-btn" data-tab="professionnel">
+          Projets Professionnels
+        </button>
+        <button class="tab-btn" data-tab="certifications">
+          Certifications
+        </button>
+      </div>
+
+      <div class="tab-content active" id="personnel">
+        <h2>Projets Personnels</h2>
+        <div class="project-card">
+          <h3>Portfolio Personnel</h3>
+          <p>
+            Conception et développement intégral d'un portfolio
+            professionnel.<br />
+            <strong>Technologies :</strong> HTML5, CSS3, JavaScript<br />
+            <strong>Fonctionnalités :</strong> Menu responsive, animations,
+            effets de particules, design moderne.
+          </p>
+          <img src="portfolio.png" alt="Portfolio" class="project-img" />
+        </div>
+        <div class="project-card">
+          <h3>Chat en direct</h3>
+          <p>
+            Application de chat en direct avec stockage en base de données.<br />
+            <strong>Technologies :</strong> HTML, CSS, PHP, MySQL
+          </p>
+          <img src="chat.png" alt="Chat en direct" class="project-img" />
+        </div>
+        <div class="project-card">
+          <h3>Formulaire d'inscription</h3>
+          <p>
+            Formulaire d'inscription avec vérification d'email et de mot de
+            passe.<br />
+            <strong>Technologies :</strong> HTML, CSS, PHP, JavaScript
+          </p>
+          <img src="formulaire.png" alt="Formulaire" class="project-img" />
+        </div>
+      </div>
+
+      <div class="tab-content" id="professionnel">
+        <h2>Projets Professionnels</h2>
+        <div class="project-card">
+          <h3>Gestionnaire de parc informatique</h3>
+          <p>
+            Développement d'une application pour la gestion du matériel
+            informatique d'une entreprise.<br />
+            <strong>Technologies :</strong> PHP, MySQL, Bootstrap
+          </p>
+          <img src="parcinfo.png" alt="Parc informatique" class="project-img" />
+        </div>
+        <div class="project-card">
+          <h3>Site vitrine pour une PME</h3>
+          <p>
+            Création d'un site vitrine moderne et responsive pour une PME.<br />
+            <strong>Technologies :</strong> WordPress, CSS3, SEO
+          </p>
+          <img src="sitepme.png" alt="Site PME" class="project-img" />
+        </div>
+      </div>
+
+      <div class="tab-content" id="certifications">
+        <h2>Certifications</h2>
+
+        <div class="project-card" id="certification1">
+          <h3>Secnum Académie Anssi</h3>
+          <p>
+            Développement d'une application pour la gestion du matériel
+            informatique d'une entreprise.<br />
+            <strong>Technologies :</strong> PHP, MySQL, Bootstrap
+          </p>
+          <img src="parcinfo.png" alt="Parc informatique" class="project-img" />
+        </div>
+        <div class="project-card">
+          <h3>Site vitrine pour une PME</h3>
+          <p>
+            Création d'un site vitrine moderne et responsive pour une PME.<br />
+            <strong>Technologies :</strong> WordPress, CSS3, SEO
+          </p>
+          <img src="sitepme.png" alt="Site PME" class="project-img" />
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> toddbahouna3@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +33 6 XX XX XX XX</p>
+            <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+          </div>
+
+          <script>
+            // Animation des onglets projets
+            document.querySelectorAll(".tab-btn").forEach((btn) => {
+              btn.addEventListener("click", function () {
+                // Onglets boutons
+                document
+                  .querySelectorAll(".tab-btn")
+                  .forEach((b) => b.classList.remove("active"));
+                this.classList.add("active");
+                // Contenus
+                document
+                  .querySelectorAll(".tab-content")
+                  .forEach((tab) => tab.classList.remove("active"));
+                document
+                  .getElementById(this.dataset.tab)
+                  .classList.add("active");
+              });
+            });
+          </script>
+          <div class="footer-section">
+            <h3>Réseaux Sociaux</h3>
+            <div class="social-links">
+              <a href="https://linkedin.com/in/todd-bahouna" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/toddbahouna" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://twitter.com/toddbahouna" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Navigation Rapide</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="projets.html">Projets Personnels</a></li>
+              <li><a href="veilleinfo.html">Veille Informatique</a></li>
+              <li><a href="apropos.html">À Propos</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Todd BAHOUNA SAINT | Tous droits réservés</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f7f9fb;
+  margin: 0;
+  padding: 0;
+}
+.about-container {
+  max-width: 800px;
+  margin: 3rem auto 2rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
+  padding: 2.5rem 2rem;
+  animation: fadeInUp 1s;
+}
+.about-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #4e7ad2;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.about-section {
+  margin-bottom: 2rem;
+}
+.about-section h3 {
+  color: #2d3a4b;
+  margin-bottom: 0.7rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.about-list {
+  margin: 0.5rem 0 1.5rem 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+.about-list li {
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.about-list li:before {
+  content: "•";
+  color: #4e7ad2;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  top: 0;
+}
+.about-emoji {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .about-container {
+    padding: 1.2rem 0.5rem;
+  }
+  .about-title {
+    font-size: 1.4rem;
+  }
+}
